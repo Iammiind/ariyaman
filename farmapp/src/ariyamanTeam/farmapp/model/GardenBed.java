@@ -1,4 +1,4 @@
-package ariyamanTeam.GardenGame.model;
+package ariyamanTeam.farmapp.model;
 
 /**
  * Created by iammiind on 3/30/2017 AD.

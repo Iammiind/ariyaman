@@ -1,6 +1,6 @@
-package ariyamanTeam.GardenGame.controller;
+package ariyamanTeam.farmapp.controller;
 
-import ariyamanTeam.GardenGame.model.Fruit;
+import ariyamanTeam.farmapp.model.Fruit;
 
 /**
  * Created by iammiind on 3/30/2017 AD.

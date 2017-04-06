@@ -1,6 +1,6 @@
-package ariyamanTeam.GardenGame.view;
+package ariyamanTeam.farmapp.view;
 
-import ariyamanTeam.GardenGame.model.Plant;
+import ariyamanTeam.farmapp.model.Plant;
 
 /**
  * Created by iammiind on 3/30/2017 AD.
