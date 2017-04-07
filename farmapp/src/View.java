@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import ariyamanTeam.farmapp.controller.Controller;
+import ariyamanTeam.farmapp.util.MathUtil;
 
 public class View {
 
@@ -8,6 +9,7 @@ public class View {
 		int exit=0;
 		Scanner Sc = new Scanner(System.in);
 		Controller controller = new Controller();
+		MathUtil test = new MathUtil();
 		while(true){
 			System.out.println("> Welcome to the gardening game! Please choose an action");
 			System.out.println("(1) View Plants");
@@ -17,6 +19,8 @@ public class View {
 			System.out.println("(5) View Inventory" );
 			System.out.println("(6) Visit Shop (Buy seeds and plant food etc.)" );
 			System.out.println("(7) Sleep 1 Day");
+//			test.add(1, 2);
+			
 			int First = Sc.nextInt();
 			
 			if(First==1){
