@@ -22,20 +22,17 @@ public class FirefruitTree implements Plant {
     	this.fruit = "don't have";
     }
 
-	@Override
 	public String getName() {
 		return this.name;
 	}
 
-	@Override
 	public int getAge() {
 		return this.age;
 	}
 	public int getrealAge() {
 		return this.realAge;
 	}
-
-	@Override
+	
 	public int getHealth() {
 		return this.health;
 	}
@@ -43,7 +40,6 @@ public class FirefruitTree implements Plant {
 		return this.realHealth;
 	}
 
-	@Override
 	public int getWater() {
 		return this.water;
 	}
@@ -51,7 +47,6 @@ public class FirefruitTree implements Plant {
 		return this.realWater;
 	}
 
-	@Override
 	public String getFruit() {
 		if(this.status == "seedling") {
 			this.fruit = "raw";

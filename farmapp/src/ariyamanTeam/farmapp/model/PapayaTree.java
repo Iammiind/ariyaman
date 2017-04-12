@@ -21,13 +21,11 @@ public class PapayaTree implements Plant {
 	    	this.realWater = 5;
 	    	this.fruit = "don't have";
 	    }
-	
-		@Override
+
 		public String getName() {
 			return this.name;
 		}
-	
-		@Override
+
 		public int getAge() {
 			return this.age;
 		}
@@ -35,23 +33,20 @@ public class PapayaTree implements Plant {
 			return this.realAge;
 		}
 	
-		@Override
 		public int getHealth() {
 			return this.health;
 		}
 		public int getrealHealth() {
 			return this.realHealth;
 		}
-	
-		@Override
+
 		public int getWater() {
 			return this.water;
 		}
 		public int getrealWater() {
 			return this.realWater;
 		}
-	
-		@Override
+
 		public String getFruit() {
 			if(this.status == "seedling") {
 				this.fruit = "raw";
