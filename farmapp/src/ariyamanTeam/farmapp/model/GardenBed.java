@@ -5,7 +5,7 @@ package ariyamanTeam.farmapp.model;
  */
 public class GardenBed {
     int amountOfHole = 4;
-
+    
     // method set
     public void AmountOfHole(int amountOfHole) {
         this.amountOfHole = amountOfHole;
