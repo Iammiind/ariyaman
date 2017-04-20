@@ -48,7 +48,7 @@ public class PapayaTree implements Plant {
 		}
 
 		public String getFruit() {
-			if(this.status == "seedling") {
+			if(this.status == "seeding") {
 				this.fruit = "raw";
 			}
 			if(this.status == "mature") {
@@ -61,7 +61,7 @@ public class PapayaTree implements Plant {
 				this.status = "seed";
 			}
 			if(this.realAge == 1) {
-				this.status = "seedling";
+				this.status = "seeding";
 			}
 			if(this.realAge >= 2 && this.realAge < this.age) {
 				this.status = "mature";
