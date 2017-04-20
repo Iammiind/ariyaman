@@ -6,10 +6,11 @@ import org.junit.Test;
 
 public class MathUtilTest {
 
-	@Test
+	/*@Test
 	public void test() {
 		fail("Not yet implemented");
-	}
+	}*/
+	@Test
 	public void  testAdd() {
 		MathUtil mathUtil = new MathUtil();
 		assertEquals(mathUtil.add(5, 4), 9);
