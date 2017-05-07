@@ -81,7 +81,7 @@ public class MoonpeachTree implements Plant {
 		if(this.realAge >= 2 && this.realAge < this.age) {
 			this.status = "mature";
 			
-			if(this.status == "mature" && this.realHealth == this.realHealth && this.getFruit == false) {
+			if(this.status == "mature" && this.realHealth == this.health && this.getFruit == false) {
 				this.getFruit = true;
 			}
 		}

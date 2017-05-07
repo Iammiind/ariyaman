@@ -85,7 +85,6 @@ public class Controller {
 	    		if(fruits.get(v).getName().equals("fire fruit")) {
 	    			this.fireFruitAmount = this.fireFruitAmount + 1;
 	    		}
-	    		
 	    		fruits.remove(v);
 	    	}
     	}
@@ -217,7 +216,7 @@ public class Controller {
     
     public void viewOwnStats(User user) {
     	System.out.println();
-    	System.out.print("---------- Your Stats ----------");
+    	System.out.println("---------- Your Stats ----------");
     	System.out.println("Name: "+ user.getName());
     	System.out.println("Stats: "+ user.getRealStats() +" / " + user.getStats());
     	System.out.println();

@@ -13,6 +13,8 @@ public interface Fruit {
     public String getName();
     public String getStatus();
     public int getStats();
+    public int getAge();
+    public int getRealAge();
     public void increaseAge();
 
 }

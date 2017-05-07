@@ -38,6 +38,16 @@ public class Papaya implements Fruit {
 	public int getStats() {
 		return this.stats;
 	}
+	
+	@Override
+	public int getAge() {
+		return this.age;
+	}
+	
+	@Override
+	public int getRealAge() {
+		return this.realAge;
+	}
 
 	@Override
 	public void increaseAge() {
