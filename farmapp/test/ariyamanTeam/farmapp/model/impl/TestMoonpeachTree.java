@@ -2,6 +2,8 @@ package ariyamanTeam.farmapp.model.impl;
 
 import static org.junit.Assert.*;
 
+import java.util.Iterator;
+
 import org.junit.Test;
 
 import ariyamanTeam.farmapp.model.impl.MoonpeachTree;
@@ -18,7 +20,7 @@ public class TestMoonpeachTree {
 	public void getAge(){
 		MoonpeachTree test = new MoonpeachTree();
 		test.getAge();
-		assertEquals(test.getAge(),10);
+		assertEquals(test.getAge(),12);
 	}
 	@Test
 	public void getrealAge(){
@@ -51,25 +53,7 @@ public class TestMoonpeachTree {
 		test.getrealWater();
 		assertEquals(test.getrealWater(),5);
 	}
-	@Test
-	public void getFruitStatusSeeding(){
-		MoonpeachTree test = new MoonpeachTree();
-		test.increaseAge();
-		test.getStatus();
-		test.getFruit();
-		assertEquals(test.getFruit(), "raw");
-		}
-	@Test
-	public void getFruitStatusMature(){
-		MoonpeachTree test = new MoonpeachTree();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.getStatus();
-		test.getFruit();
-		assertEquals(test.getFruit(), "ripe");
-		
-	}
+	
 	@Test
 	public void getStatusSeed(){
 		MoonpeachTree test = new MoonpeachTree();
@@ -77,6 +61,7 @@ public class TestMoonpeachTree {
 		test.getStatus();
 		assertEquals(test.getStatus(),"seed");
 	}
+	
 	@Test
 	public void getStatusSeeding(){
 		MoonpeachTree test = new MoonpeachTree();
@@ -88,45 +73,57 @@ public class TestMoonpeachTree {
 	@Test
 	public void getStatusMature(){
 		MoonpeachTree test = new MoonpeachTree();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
+		for (int i = 0; i < 4; i++) {
+			test.increaseAge();
+		}
 		test.getrealAge();
 		test.getStatus();
 		assertEquals(test.getStatus(),"mature");
 	}
+	
+	@Test
+	public void getStatusCreateFruit(){
+		MoonpeachTree test = new MoonpeachTree();
+		if(test.getStatus().equals("mature")&&test.getrealHealth()== test.getHealth()&&test.getFruit==false){
+			assertEquals(test.getFruit,true);
+		}
+	}
+	
 	@Test
 	public void getStatusDead(){
 		MoonpeachTree test = new MoonpeachTree();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
+		
+		for (int i = 0; i < 5; i++) {
+			test.increaseAge();
+			
+		}
+		
 		test.getrealAge();
 		test.getAge();
 		test.getStatus();
-		assertEquals(test.getStatus(),"dead");
+		if (test.realAge == test.age || test.realWater == 0 && test.realHealth == 0) {
+			assertEquals(test.getStatus(),"dead");
+		}
+		
 	}
 	@Test
 	public void increaseAge(){
 		MoonpeachTree test = new MoonpeachTree();
 		test.increaseAge();
-		assertEquals(test.getAge(),1);
+		test.getFruit();
+		if (test.getFruit == true) {
+			assertEquals(test.getAge(),1);
+		}
+		
 		
 	}
 	@Test
 	public void reduceHealth(){
 		MoonpeachTree test = new MoonpeachTree();
-		test.reduceWater();
-		test.reduceWater();
-		test.reduceWater();
-		test.reduceWater();
+		for (int i = 0; i < 4; i++) {
+			test.reduceWater();
+		}
+		
 		test.reduceWater();
 		test.reduceHealth();
 		assertEquals(test.realHealth,4);
@@ -147,6 +144,13 @@ public class TestMoonpeachTree {
 		assertEquals(test.getrealWater(),5);
 		
 	}
+	@Test
+	public void getStatusFruit(){
+		MoonpeachTree test = new MoonpeachTree();
+		test.getStatus();
+		test.getFruit();		
+		
+			}
 	
 	
 	
