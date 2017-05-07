@@ -11,8 +11,9 @@ public interface Plant {
     int realHealth = 0;
     int water = 0;
     int realWater = 0;
-    Fruit fruit = null;
     String status = "";
+    String fruit = "";
+    boolean getFruit = false;
 
     // method get
     public String getName();
@@ -22,12 +23,15 @@ public interface Plant {
     public int getrealHealth();
     public int getWater();
     public int getrealWater();
-    public String getFruit();
+    public String getStatusFruit();
     public String getStatus();
+    public Fruit getFruit();
     
-    public int increaseAge();
-    public int reduceHealth();
-    public int reduceWater();
-    public int increaseWater();
+    public void increaseAge();
+    public void increaseHealth();
+    public void reduceHealth();
+    public void reduceWater();
+    public void increaseWater();
+    
 }
 

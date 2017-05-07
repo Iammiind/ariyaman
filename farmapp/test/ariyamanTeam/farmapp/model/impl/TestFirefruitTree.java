@@ -1,8 +1,10 @@
-package ariyamanTeam.farmapp.model;
+package ariyamanTeam.farmapp.model.impl;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import ariyamanTeam.farmapp.model.impl.FirefruitTree;
 
 public class TestFirefruitTree {
 

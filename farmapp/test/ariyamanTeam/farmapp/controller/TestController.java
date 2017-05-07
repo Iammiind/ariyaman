@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import ariyamanTeam.farmapp.model.FirefruitTree;
-import ariyamanTeam.farmapp.model.MoonpeachTree;
-import ariyamanTeam.farmapp.model.PapayaTree;
 import ariyamanTeam.farmapp.model.Plant;
+import ariyamanTeam.farmapp.model.impl.FirefruitTree;
+import ariyamanTeam.farmapp.model.impl.MoonpeachTree;
+import ariyamanTeam.farmapp.model.impl.PapayaTree;
 
 public class TestController {
 	@Test

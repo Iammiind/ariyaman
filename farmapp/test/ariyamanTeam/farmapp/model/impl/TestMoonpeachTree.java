@@ -1,8 +1,10 @@
-package ariyamanTeam.farmapp.model;
+package ariyamanTeam.farmapp.model.impl;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import ariyamanTeam.farmapp.model.impl.MoonpeachTree;
 
 public class TestMoonpeachTree {
 	
@@ -115,7 +117,7 @@ public class TestMoonpeachTree {
 	public void increaseAge(){
 		MoonpeachTree test = new MoonpeachTree();
 		test.increaseAge();
-		assertEquals(test.increaseAge(),1);
+		assertEquals(test.getAge(),1);
 		
 	}
 	@Test

@@ -1,4 +1,4 @@
-package ariyamanTeam.farmapp.model;
+package ariyamanTeam.farmapp.model.impl;
 
 import static org.junit.Assert.*;
 
