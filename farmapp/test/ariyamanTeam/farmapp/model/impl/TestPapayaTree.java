@@ -17,7 +17,7 @@ public class TestPapayaTree {
 	public void getAge() {
 		PapayaTree test =new PapayaTree();
 		test.getAge();
-		assertEquals(test.getAge(), 7);
+		assertEquals(test.getAge(), 15);
 	}
 
 	@Test
@@ -42,22 +42,19 @@ public class TestPapayaTree {
 	}
 	
 	@Test
-	public void getRawFruit(){
-		PapayaTree test =new PapayaTree();
-		test.increaseAge();
-		test.getStatus();
-		test.getFruit();
-		assertEquals(test.getFruit(), "raw");
+	public void getFruitStatusAvailable(){
+		PapayaTree test = new PapayaTree();
+		if(test.getFruit == true){
+			assertEquals(test.getStatus(),"raw");
+		}
 	}
 	
 	@Test
-	public void getRipeFruit(){
-		PapayaTree test =new PapayaTree();
-		test.increaseAge();
-		test.increaseAge();
-		test.getStatus();
-		test.getFruit();
-		assertEquals(test.getFruit(), "ripe");
+	public void getFruitStatusUnavailable(){
+		PapayaTree test = new PapayaTree();
+		if(test.getFruit == false){
+			test.fruit.equals("don't have");
+		}
 	}
 	
 	@Test
@@ -86,12 +83,17 @@ public class TestPapayaTree {
 	
 	@Test
 	public void getStatusDead(){
-		PapayaTree test =new PapayaTree();
-		for(int i=1;i<8;i++){
+		PapayaTree test = new PapayaTree();
+		for(int i=0; i<5; i++){
 			test.increaseAge();
-			test.getStatus();
 		}
-		assertEquals(test.getStatus(), "dead");
+		test.getrealAge();
+		test.getAge();
+		test.getStatus();
+		if(test.getrealAge() == test.getAge() || test.getrealWater() == 0 && test.getrealHealth() == 0){
+			assertEquals(test.getStatus(),"dead");
+		}
+				
 	}
 	
 	@Test
@@ -113,10 +115,12 @@ public class TestPapayaTree {
 	
 	@Test
 	public void increaseWater(){
-		PapayaTree test =new PapayaTree();
-		test.increaseWater();
-		assertEquals(test.getrealWater(),6);
+		PapayaTree test = new PapayaTree();
+		test.getFruit();
+		test.getrealWater();
+		assertEquals(test.getrealWater(),5);
 	}
+
 	
 	@Test
 	public void reduceWater(){

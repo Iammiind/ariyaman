@@ -19,7 +19,7 @@ public class TestFirefruitTree {
 	public void getAge(){
 		FirefruitTree test = new FirefruitTree();
 		test.getAge();
-		assertEquals(test.getAge(), 5);
+		assertEquals(test.getAge(), 10);
 	}
 	
 	@Test
@@ -58,23 +58,19 @@ public class TestFirefruitTree {
 	}
 	
 	@Test
-	public void getFruitStatusSeedling(){
+	public void getFruitStatusAvailable(){
 		FirefruitTree test = new FirefruitTree();
-		test.increaseAge();
-		test.getStatus();
-		test.getFruit();
-		assertEquals(test.getFruit(),"raw");
+		if(test.getFruit == true){
+			assertEquals(test.getStatus(),"raw");
+		}
 	}
 	
 	@Test
-	public void getFruitStatusMature(){
+	public void getFruitStatusUnavailable(){
 		FirefruitTree test = new FirefruitTree();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.getStatus();
-		test.getFruit();
-		assertEquals(test.getFruit(),"ripe");
+		if(test.getFruit == false){
+			test.fruit.equals("don't have");
+		}
 	}
 	
 	@Test
@@ -97,27 +93,36 @@ public class TestFirefruitTree {
 	@Test
 	public void getStatusMature(){
 		FirefruitTree test = new FirefruitTree();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
+		for(int i=0; i<4; i++){
+			test.increaseAge();
+		}
+		
 		test.getrealAge();
 		test.getStatus();
 		assertEquals(test.getStatus(),"mature");
 	}
 	
 	@Test
+	public void getStatusCreatFruit(){
+		FirefruitTree test = new FirefruitTree();
+		if(test.getStatus().equals("mature") && test.getrealHealth() == test.getHealth() && test.getFruit == false){
+			assertEquals(test.getFruit, true);
+		}
+	}
+	
+	@Test
 	public void getStatusDead(){
 		FirefruitTree test = new FirefruitTree();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
-		test.increaseAge();
+		for(int i=0; i<5; i++){
+			test.increaseAge();
+		}
 		test.getrealAge();
 		test.getAge();
 		test.getStatus();
-		assertEquals(test.getStatus(),"dead");
+		if(test.getrealAge() == test.getAge() || test.getrealWater() == 0 && test.getrealHealth() == 0){
+			assertEquals(test.getStatus(),"dead");
+		}
+				
 	}
 	
 	@Test
@@ -131,11 +136,9 @@ public class TestFirefruitTree {
 	@Test
 	public void reduceHealth(){
 		FirefruitTree test = new FirefruitTree();
-		test.reduceWater();
-		test.reduceWater();
-		test.reduceWater();
-		test.reduceWater();
-		test.reduceWater();
+		for(int i = 0; i<5; i++){
+			test.reduceWater();
+		}
 		test.reduceHealth();
 		assertEquals(test.realHealth, 4);
 	}
